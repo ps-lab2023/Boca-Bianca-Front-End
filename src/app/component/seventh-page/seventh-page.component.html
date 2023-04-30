@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping Cart UI</title>
+	<link rel="appcomponentcss" type="text/css" href="./style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+</head>
+<body>
+  <div class="banner">
+	<div class="navigationBar">
+        <ul>
+          <li><a routerLink="/" href="#"><b>HOME</b></a></li>
+          <li><a  routerLink="/fourth-page" href="#"><b>SERVICES</b></a></li>
+          <li><button (click)="btnClick();"   class="btnLogin" ><b> LOGIN</b> </button></li>
+          <li ><button (click)="btnClick2()"class="btnCart "><i class="fa fa-shopping-cart"></i></button></li>
+          <li><div class="search-container">
+            <form class="search" action="">
+              <input type="text" placeholder="Search.." name="search" >
+              <button class="iconSearch"  type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            </div>
+			<li> <p class="welcomeText"><b> WELCOME {{currentUser?.numeClient}} !</b></p></li>
+
+        </ul>
+    </div>
+  
+    <div class="wrapper">
+		<h1>Shopping Cart</h1>
+		<div class="project">
+			<div class="shop">
+				
+				<div class="box" *ngFor="let product of items ">
+					<img class="imag"[src]="product.images">
+					<div class="content">
+						<h3 class="titlu">{{product.nameProduct}}</h3>
+						<h4 class="pret">PRET:{{findAllPrice(product)}}  </h4>
+						<p class="unit">Cantitate: <input [(ngModel)]="product.quantityOrder" name="" value="1"></p>
+						<p class="btn-area" (click)="removeItem(findProductIndex(product))"><i aria-hidden   ="true" class="fa fa-trash"></i> <span class="btn2">Remove</span></p>
+					</div>
+				</div>
+				
+				
+			</div>
+			<div class="right-bar" >
+				<p><span>Subtotal</span> <span>{{calculateTotalPrice(items)}}</span></p>
+				<hr>
+				
+				<p><span>Transport</span> <span class="priceTransport">{{pretTransport}}</span></p>
+				<hr>
+				<p><span>Total</span> <span class="priceTotal">{{calculateTotalPrice(items)+pretTransport}}</span></p>
+				<!-- <a href="#"><i class="fa fa-shopping-cart"></i>Checkout</a> -->
+			</div>
+		</div>
+	</div>
+  </div>
+
+</body>
+</html>

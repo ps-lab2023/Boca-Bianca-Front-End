@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="appcomponentcss" href="styles.css">
+  <title>Hiking Kings</title>
+</head>
+
+
+
+<body>
+  <div class="banner">
+    <div class="navigationBar">
+      <ul>
+        <li><a routerLink="/" href="#"><b>HOME</b></a></li>
+        <li><a routerLink="/fourth-page" href="#"><b>SERVICES</b></a></li>
+        <li><button (click)="btnClick();" class="btnLogin"><b> LOGIN</b> </button></li>
+        <li><button (click)="btnClick2()" class="btnCart "><i class="fa fa-shopping-cart"></i></button></li>
+        <li>
+          <div class="search-container">
+            <form class="search" action="">
+              <input type="text" placeholder="Search.." name="search">
+              <button class="iconSearch" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+        <li> <p class="welcomeText"><b> WELCOME {{currentUser?.numeClient}} !</b></p></li>
+        
+
+      </ul>
+    </div>
+
+    <div class="wrapper">
+      <div>
+      <h2 class="title">REGISTER</h2>
+      </div>
+        <div class="content">
+          <form action="#">
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">Name</span>
+                <input type="text" placeholder="Enter your name" [(ngModel)]="myInputName" [ngModelOptions]="{standalone: true}" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Username</span>
+                <input type="text" placeholder="Enter your username" [(ngModel)]="myInputUsername" [ngModelOptions]="{standalone: true}" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Email</span>
+                <input type="text" placeholder="Enter your email" [(ngModel)]="myInputEmail" [ngModelOptions]="{standalone: true}" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Phone Number</span>
+                <input type="text" placeholder="Enter your number" [(ngModel)]="myInputPhone" [ngModelOptions]="{standalone: true}" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Password</span>
+                <input type="text" placeholder="Enter your password" [(ngModel)]="myInputPassword" [ngModelOptions]="{standalone: true}" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Adress</span>
+                <input type="text" placeholder="Enter your adress"[(ngModel)]="myInputAddress" [ngModelOptions]="{standalone: true}" required>
+              </div>
+            </div>
+            <!-- <div class="gender-details">
+              <input type="radio" name="gender" id="dot-1">
+              <input type="radio" name="gender" id="dot-2">
+              <input type="radio" name="gender" id="dot-3">
+              <span class="gender-title">Gender</span>
+              <div class="category">
+                <label for="dot-1">
+                  <span class="dot one"></span>
+                  <span class="gender">Male</span>
+                </label>
+                <label for="dot-2">
+                  <span class="dot two"></span>
+                  <span class="gender">Female</span>
+                </label>
+                <label for="dot-3">
+                  <span class="dot three"></span>
+                  <span class="gender">Prefer not to say</span>
+                </label>
+              </div>
+            </div> -->
+          <!-- <div class="button">
+                <input type="submit" value="Register">
+              </div> -->
+          <button (click)="register()" type="submit" class="btn">SUBMIT </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
+
+<!-- 
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-sclae=1.0">
+  <title>Website with Login and Registration</title>
+  <link rel="appcomponentcss" href="app.component.css">
+
+</head>
+<body>
+  <header>
+    <h2 class="logo">Logo</h2>
+    <nav class="navigation">
+      <a href="#">Home </a>
+      <a href="#"> About </a>
+      <a href="#"> Services </a>
+      <a href="#"> Contact </a>
+      <button class="btnLogin"> Login </button>
+    </nav>
+  </header>
+
+  <div class="wrapper">
+    <div class="form-login">
+      <h2>Registration</h2>
+      <form action="#">
+        <div class="input-box">
+          <span class="icon"> 
+            <ion-icon name="person"></ion-icon>
+          </span>
+          <input type="text" required [(ngModel)]="myInputFirstName" name="myInputFirstName">
+          <label>First Name</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"> 
+            <ion-icon name="person"></ion-icon>
+          </span>
+          <input type="text" required [(ngModel)]="myInputSecondName" name="myInputSecondName">
+          <label>Second Name</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"> 
+            <ion-icon name="call"></ion-icon>
+          </span>
+          <input type="tel" required [(ngModel)]="myInputNumber" name="myInputNumber">
+          <label>Number</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"> 
+            <ion-icon name="location"></ion-icon>
+          </span>
+          <input type="text" required [(ngModel)]="myInputAddress" name="myInputAddress">
+          <label>Address</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"> 
+            <ion-icon name="mail"></ion-icon>
+          </span>
+          <input type="email" required [(ngModel)]="myInputEmail" name="myInputEmail">
+          <label>Email</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"> 
+            <ion-icon name="lock-closed"></ion-icon>
+          </span>
+          <input type="password" required [(ngModel)]="myInputPassword" name="myInputPassword">
+          <label>Password</label>
+        </div>
+        <button type="submit" class="btn" >Register</button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html> -->

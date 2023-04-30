@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="appcomponentcss" href="styles.css">
+        <title>Hiking Kings</title>
+</head>
+
+<body>
+    <div class="banner">
+      <div class="navigationBar">
+        <ul>
+          <li><a routerLink="/" href="#"><b>HOME</b></a></li>
+          <li><a  routerLink="/fourth-page" href="#"><b>SERVICES</b></a></li>
+          <li><button (click)="btnClick();"   class="btnLogin" ><b> LOGIN</b> </button></li>
+          <li ><button (click)="btnClick2()"class="btnCart "><i class="fa fa-shopping-cart"></i></button></li>
+          <li><div class="search-container">
+            <form class="search" action="">
+              <input type="text" placeholder="Search.." name="search" >
+              <button class="iconSearch"  type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            </div>
+            <li> <p class="welcomeText"><b> WELCOME {{currentUser?.numeClient}} !</b></p></li>
+
+        </ul>
+    </div>
+        
+        <div class="wrapper">
+          <div class="contact-box">
+            <div class="left"></div>
+            <div class="right">
+              <h2>Contact Us</h2>
+              <input type="text" class="field" placeholder="Your Name">
+              <input type="text" class="field" placeholder="Your Email">
+              <input type="text" class="field" placeholder="Phone">
+              <textarea placeholder="Message" class="field"></textarea>
+              <button class="btn">Send</button>
+            </div>
+          </div>
+           </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>

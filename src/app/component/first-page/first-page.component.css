@@ -1,0 +1,389 @@
+.navigationBar {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #464343;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.navigationBar ul 
+{
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigationBar li 
+{
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.navigationBar ul li .input[type=text] .container{
+  position: relative;
+}
+.navigationBar .search-container {
+position: relative;
+left: 60%;
+z-index:0;
+
+}
+
+.navigationBar a {
+  text-decoration: none;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.navigationBar a:hover {
+  color: #c29904;
+}
+
+
+.btnLogin,
+.btnCart {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.btnCart i {
+  font-size: 24px;
+}
+
+.btnLogin:hover,
+.btnCart:hover {
+  color: #f5a623;
+}
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+ 
+
+header{
+    display: block;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.welcomeText{
+  position: relative;
+  left:200px;
+  font-size: 20px;
+}
+.LogoImage{
+    display: flex;
+    
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('shop.jpg') no-repeat;
+    background-size: cover; 
+}
+
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 600px;
+    background: transparent;
+    filter: brightness(200%);
+    align-items: center;
+    left:37%;
+    top:30px;
+    /* top: 40%; */
+    border: 4px solid rgb(0, 0, 0);
+    border-radius: 60px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 40px rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper .form-login {
+    width: 100%;
+    
+    align-items: center;
+    padding: 40px;   
+   }
+
+.form-login h2{
+    font-size: 2em;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    position: center;
+
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    margin: 30px 0;
+}
+
+.input-box label{
+    position: absolute;
+    top: 25%;
+    left:5px;
+    transform: translateY(-50%);
+    font-size: 1.3em;
+    color: #000000;
+    font-weight: 500;
+    pointer-events: none;
+    transition:  .5s;
+     
+}
+.input-box input:focus~label,
+.input-box input:valid~label
+{
+    top: -5px;
+}
+
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border:none;
+    outline: none;
+    font-size: 2em;
+    color: #000000;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: darkblue;
+    line-height: 57px;
+}
+
+.forgotPassword{
+    font-size: .9em;
+    color:#000000;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.forgotPassword label input{
+    accent-color: #000;
+    margin-right: 3px;
+}
+.forgotPassword a{
+    font-size: 14px;
+    color:#000000;
+    text-decoration: none;
+}
+.forgotPassword a:hover
+{
+    text-decoration: underline;
+}
+.btn{
+    width: 30%;
+    height: 30px;
+    right: 10%;
+    left: 35%;
+
+    justify-content: center;
+    position: relative;
+    box-shadow: 0px 0px 4px 4px rgb(49, 4, 4);
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    border:none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: aliceblue;
+    font-weight: 500;
+
+}
+
+.Login-Register
+{
+    font-size: .9em;
+    color: #000;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+ }
+ .Login-Register a{
+    color:#000;
+ }
+
+ .btn.incorrect {
+    background-color: red;
+    color: white;
+  }
+  
+  .center-cointainer{
+    display: block;
+
+  }
+
+  /* HEADER */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Mulish", sans-serif;
+  }
+  
+  .banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+      url('shop.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  
+  .logo {
+    width: 500px;
+    cursor: pointer;
+  }
+  
+  .navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: rgb(157, 168, 0);
+    font-size:17px;
+    text-transform: uppercase;
+  }
+  
+  /* .navbar ul li:after, .navbar ul li .a:after {
+    content: "";
+    height: 3px;
+    color: grey;
+    width: 0;
+    background: #000000;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+  }
+
+  .navbar ul li .a::after:hover{
+    color: #000000;
+  } */
+  
+  .navbar ul li:hover::after {
+    width: 100%;
+  }
+  
+  .content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: rgb(0, 0, 0)
+  }
+  .btnLogin,
+  .btnCart {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .btnCart i {
+    font-size: 24px;
+  }
+  
+  .btnLogin:hover,
+  .btnCart:hover {
+    color: #f5a623;
+  }
+  
+  .content h1 {
+    font-size: 70px;
+    margin-top: 80px;
+  }
+  
+  .content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+  }
+  
+  .login-btn {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: rgb(36, 145, 159);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .wrapper .form-login label img {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    left: 35%;
+    margin-right: 5px;
+  }
+
+  
+ 

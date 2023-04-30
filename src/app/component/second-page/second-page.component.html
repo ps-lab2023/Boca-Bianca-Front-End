@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="appcomponentcss" href="styles.css">
+        <title>Hiking Kings</title>
+</head>
+
+<body>
+    <div class="banner">
+      <div class="navigationBar">
+        <ul>
+          <li><a routerLink="/" href="#"><b>HOME</b></a></li>
+          <li><a  routerLink="/fourth-page" href="#"><b>SERVICES</b></a></li>
+          <li><button (click)="btnClick();"   class="btnLogin" ><b> LOGIN</b> </button></li>
+          <li ><button (click)="btnClick2()"class="btnCart "><i class="fa fa-shopping-cart"></i></button></li>
+          <li><div class="search-container">
+            <form class="search" action="">
+              <input type="text" placeholder="Search.." name="search" >
+              <button class="iconSearch"  type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            </div>
+            <li> <p class="welcomeText"><b> WELCOME {{currentUser?.numeClient}} !</b></p></li>
+
+        </ul>
+    </div>
+        <div class="wrapper">
+          <p class="introducere"> About Us </p>
+        </div>
+        
+        <div class="wrapper1">
+          <p class="textinput"><b>As you step inside the modern office building, you're greeted by a hive of activity. The employees are buzzing with energy, collaborating and problem-solving with passion and purpose.</b> </p>
+        </div>
+        <div class="wrapper2">
+          <p class="textinput"><b>We are committed to sustainable beekeeping practices, which means that we prioritize the health and well-being of our bees and our environment. We ensure that our bees are well-fed and have access to clean water and diverse plant life.</b> </p>
+        </div>
+          
+        <div class="wrapper3">
+          <p class="textinput"><b>Our beekeeping products stand out in the market due to our sustainable practices, high-quality products, and personalized customer service. We are confident that our products will exceed your expectations, and we look forward to serving you. </b> </p>
+        </div>
+    </div>
+
+   
+  
+  
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
